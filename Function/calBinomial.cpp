@@ -44,7 +44,7 @@ int main(){
     cout<<"Enter a number: ";
     cin>>n;
     if(isPrime(n)){;
-         cout<<n<<" is a Prime.";
+        cout<<n<<" is a Prime.";
     }else 
         cout<<n<<" is not Prime.";
     return 0;

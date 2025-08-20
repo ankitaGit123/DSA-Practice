@@ -2,6 +2,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//aggresive cow
+//using binary search
 bool isPossible(vector<int> &arr, int N, int C, int minAllowedDist){
     int cows =1, lastStallPos = arr[0];
     for(int i=1; i<N; i++){

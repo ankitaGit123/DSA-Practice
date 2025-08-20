@@ -22,7 +22,7 @@ int main(){
     return 0;
 }
 
-//recerse arr
+//reverse arr
 
 void ReverseArr(int arr[], int n){
     int start = 0;

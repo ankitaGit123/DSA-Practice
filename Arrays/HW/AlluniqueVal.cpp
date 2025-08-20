@@ -1,51 +1,49 @@
-#include<iostream>
-#include<bits/stdc++.h>
+#include <iostream>
+#include <unordered_map>
 using namespace std;
 
-int FindUniqueVal(int arr[], int n){
+// XOR method — Works only if there is exactly ONE unique element 
+// and all others appear twice
+int FindUniqueVal(int arr[], int n) {
     int result = 0;
-    // int i = 0;
-    for(int i=0; i<n; i++){
-        result ^= arr[i]; //XOR of same elements cancels out
+    for (int i = 0; i < n; i++) {
+        result ^= arr[i]; // XOR cancels out duplicates
     }
     return result;
 }
 
-int main(){
-    int arr[] = {5, 2, 9, 2, 5}; // Can be sorted or unsorted
-    int sz = sizeof(arr) / sizeof(arr[0]);
-    int Unique = FindUniqueVal(arr, sz);
-    cout<<"Unique valus is : "<<Unique<<endl;
-    return 0;
-}
+// Frequency map method — Works when there can be multiple unique elements
+// void FindAllUnique(int arr[], int n) {
+//     unordered_map<int, int> freq;
 
-//greater than 1 unique
+//     // Count frequency
+//     for (int i = 0; i < n; i++) {
+//         freq[arr[i]]++;
+//     }
+
+//     // Print elements with frequency = 1
+//     cout << "Unique elements are: ";
+//     for (auto &x : freq) {
+//         if (x.second == 1) {
+//             cout << x.first << " ";
+//         }
+//     }
+//     cout << endl;
+// }
+
+    // int main() {
+    //     int arr[] = {5, 2, 9, 4, 2, 5};
+    //     int sz = sizeof(arr) / sizeof(arr[0]);
+
+    //     // Case 1: Only 1 unique element (rest twice)
+    //     // int uniqueVal = FindUniqueVal(arr, sz);
+    //     // cout << "Single unique value is: " << uniqueVal << endl;
+
+    //     // Case 2: Multiple unique elements
 
 
+        
+    //     FindAllUnique(arr, sz);
 
-void FindAllUnique(int arr[], int n) {
-    unordered_map<int, int> freq;
-
-    // Count frequency
-    for (int i = 0; i < n; i++) {
-        freq[arr[i]]++;
-    }
-
-    // Print elements with frequency = 1
-    cout << "Unique elements are: ";
-    for (auto x : freq) {
-        if (x.second == 1) {
-            cout << x.first << " ";
-        }
-    }
-    cout << endl;
-}
-
-int main() {
-    int arr[] = {5, 2, 9, 4, 2, 5};
-    int sz = sizeof(arr) / sizeof(arr[0]);
-
-    FindAllUnique(arr, sz);
-
-    return 0;
-}
+    //     return 0;
+//}

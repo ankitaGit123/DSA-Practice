@@ -3,7 +3,7 @@
 using namespace std;
 
 //check valid or not
-
+//calculate the min of max possible no.
 // overAll TC ==o(logN*n)
 bool isValid(vector<int> &arr, int n, int m, int maxAllowedPages){
     int students = 1, pages = 0;
