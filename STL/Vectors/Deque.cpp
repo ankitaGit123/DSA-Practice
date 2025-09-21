@@ -5,13 +5,13 @@ using namespace std;
 
 int main(){
 
-    deque<int> d = {1,2,3,4,5};
+    deque<int> d = {1,2,3,6,5};
 
     for(int val: d){
         cout<< val <<" ";
     }
     cout<<endl;
 
-    cout<<d[2]<<endl;
+    cout<<d[3]<<endl;
     return 0;
 }

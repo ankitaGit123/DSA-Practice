@@ -3,47 +3,31 @@
 using namespace std;
 
 // XOR method — Works only if there is exactly ONE unique element 
-// and all others appear twice
-int FindUniqueVal(int arr[], int n) {
-    int result = 0;
-    for (int i = 0; i < n; i++) {
-        result ^= arr[i]; // XOR cancels out duplicates
+
+// 
+// for multiple unique elements
+void FindUniqueVals(int arr[], int n) {
+    unordered_map<int,int> freq;
+
+    // count frequency of each element
+    for(int i=0; i<n; i++){
+        freq[arr[i]]++;
     }
-    return result;
+
+    cout << "Unique elements are: ";
+    for(auto &it : freq){
+        if(it.second == 1){
+            cout << it.first << " ";
+        }
+    }
+    cout << endl;
 }
 
-// Frequency map method — Works when there can be multiple unique elements
-// void FindAllUnique(int arr[], int n) {
-//     unordered_map<int, int> freq;
+int main() {
+    int arr[] = {5, 2, 9, 4, 2, 5};
+    int sz = sizeof(arr) / sizeof(arr[0]);
 
-//     // Count frequency
-//     for (int i = 0; i < n; i++) {
-//         freq[arr[i]]++;
-//     }
+    FindUniqueVals(arr, sz);
 
-//     // Print elements with frequency = 1
-//     cout << "Unique elements are: ";
-//     for (auto &x : freq) {
-//         if (x.second == 1) {
-//             cout << x.first << " ";
-//         }
-//     }
-//     cout << endl;
-// }
-
-    // int main() {
-    //     int arr[] = {5, 2, 9, 4, 2, 5};
-    //     int sz = sizeof(arr) / sizeof(arr[0]);
-
-    //     // Case 1: Only 1 unique element (rest twice)
-    //     // int uniqueVal = FindUniqueVal(arr, sz);
-    //     // cout << "Single unique value is: " << uniqueVal << endl;
-
-    //     // Case 2: Multiple unique elements
-
-
-        
-    //     FindAllUnique(arr, sz);
-
-    //     return 0;
-//}
+    return 0;
+}

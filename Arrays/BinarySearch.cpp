@@ -1,37 +1,39 @@
-#include<iostream>
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
-int binarySearch(vector<int> arr, int tar){
-    int st=0, end = arr.size()-1;
+int binarySearch(const vector<int>& arr, int tar) {
+    int st = 0, end = arr.size() - 1;
 
-    while(st <= end){
-        int mid = st + (end-st)/2;
+    while (st <= end) {
+        int mid = st + (end - st) / 2;
 
-        if(tar > arr[mid]){
-            st = mid+1;
+        if (tar > arr[mid]) {
+            st = mid + 1;
         }
-        else if(tar< arr[mid]){
-            end = mid -1;
+        else if (tar < arr[mid]) {
+            end = mid - 1;
         }
-        else{
-            return mid;
+        else {
+            return mid; // found
         }
     }
-    return -1;
+    return -1; // not found
 }
 
-int main(){
-    vector<int> arr1= {-1, 0, 3, 4, 5, 9, 12};
-    int tar1 =40;
+int main() {
+    vector<int> arr1 = {-1, 0, 3, 4, 5, 9, 12};
+    int tar1 = 9;
 
     vector<int> arr2 = {-1, 0, 3, 5, 8, 12};
-    int tar2 = 10;
+    int tar2 = 0;
 
-    cout<<binarySearch(arr2, tar2)<< endl;
+    cout << "Search in arr1 : Index = " << binarySearch(arr1, tar1) << endl;
+    cout << "Search in arr2 : Index = " << binarySearch(arr2, tar2) << endl;
+
     return 0;
-
 }
+
 
 //binary with recursion
 

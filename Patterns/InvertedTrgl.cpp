@@ -9,12 +9,12 @@ using namespace std;
 // int main(){
 //     int n;
 //     cin>>n;
-//     for(int i=0; i<=n; i++){
-//         for(int j=0; j<i; j++){
+//     for(int i=1; i<=n; i++){
+//         for(int j=1; j<i; j++){
 //             cout<<" "<<" ";
 //         }
-//         for(int j=1; j<=n-i; j++){
-//             cout<<(i+1)<<" ";
+//         for(int j=1; j<=n-i+1; j++){
+//             cout<<(i)<<" ";
 //         }
 //         cout<<endl;
 //     }
@@ -30,12 +30,12 @@ using namespace std;
 // int main(){
 //     int n;
 //     cin>>n;
-//     for(int i=0; i<n; i++){
-//         for(int j=0; j<i; j++){
+//     for(int i=1; i<=n; i++){
+//         for(int j=1; j<=i; j++){
 //             cout<<" ";
 //         }
-//         for(int j=0; j<n-i; j++){
-//             cout<<(i+1)<<" ";
+//         for(int j=1; j<=n-i+1; j++){
+//             cout<<(i)<<" ";
 //         }
 //         cout<<endl;
 //     }
@@ -50,19 +50,22 @@ using namespace std;
 // int main(){
 //     int n;
 //     cin>>n;
-    
-//     for(int i=0; i<n; i++){
-//         char ch = 'A' + i;
-//         for(int j=0; j<i; j++){
+//     char ch = 'A';
+//     for(int i=1; i<=n; i++){
+//         //char ch = 'A' + i;
+//         for(int j=1; j<=i-1; j++){
 //             cout<<" "<<" ";
 //         }
-//         for(int j=0; j<n-i; j++){
+//         for(int j=1; j<=1+n-i; j++){
 //             cout<<ch<<" ";
 //         }
+//         ch++;
+
 //         cout<<endl;
 //     }
 //     return 0;
 // }
+
 
     //       1 
     //     1 2 1 
@@ -86,7 +89,28 @@ using namespace std;
 //         cout<<endl;
 //     }
 //     return 0;
-//}
+// }
+
+// int main(){
+//     int n;
+//     cin>>n;
+//     for(int i=0; i<n; i++){
+//         for(int j=0; j<n-i; j++){
+//             cout<<" "<<" ";
+//         }
+//         for(int j=0; j<i; j++){
+//             cout<<j+1<<" ";
+            
+//         }
+//         for(int j=i+1; j>=1; j--){
+//             cout<<j<<" ";
+            
+//         }
+        
+//         cout<<endl;
+//     }
+//     return 0;
+// }
       
 //       * 
 //     *   * 
@@ -98,47 +122,47 @@ using namespace std;
       
 
 
-int main(){
-    int n; 
-    cin>>n;
+// int main(){
+//     int n; 
+//     cin>>n;
 
-    for(int i=0; i<n; i++){
+//     for(int i=0; i<n; i++){
+//     //top
+//         //space
+//         for(int j = 0; j<n-i-1; j++){
+//             cout<<" "<<" ";
+//         }
+//         // stars-1
+//         cout<<"*"<<" ";
+//         if(i != 0){
+//             //space middle
+//             for(int j = 0; j<(2*i-1); j++){ //odd no.
+//             cout<<" "<<" ";
+//             }
+//             cout<<"*"<<" ";
+//         }
+//         cout<<endl;
+//     } 
+//     // bottum part
+//     for(int i=0; i<n-1; i++){
 
-        //space
-        for(int j = 0; j<n-i+1; j++){
-            cout<<" "<<" ";
-        }
-        // stars-1
-        cout<<"*"<<" ";
-        if(i != 0){
-            //space middle
-            for(int j = 0; j<(2*i-1); j++){ //odd no.
-            cout<<" "<<" ";
-            }
-            cout<<"*"<<" ";
-        }
-        cout<<endl;
-    } 
-    // bottum part
-    for(int i=0; i<n-1; i++){
-
-        //space
-        for(int j = 0; j<i+1; j++){
-            cout<<" "<<" ";
-        }
-        // stars-1
-        cout<<"*"<<" ";
-        if(i != n-2){
-            //space middle
-            for(int j = 0; j<2*(n-i)-5; j++){
-            cout<<" "<<" ";
-            }
-            cout<<"*"<<" ";
-        }
-        cout<<endl;
-    } 
-    return 0;
-}
+//         //space
+//         for(int j = 0; j<i+1; j++){
+//             cout<<" "<<" ";
+//         }
+//         // stars-1
+//         cout<<"*"<<" ";
+//         if(i != n-2){
+//             //space middle
+//             for(int j = 0; j<2*(n-i)-5; j++){
+//             cout<<" "<<" ";
+//             }
+//             cout<<"*"<<" ";
+//         }
+//         cout<<endl;
+//     } 
+//     return 0;
+// }
 
 
 

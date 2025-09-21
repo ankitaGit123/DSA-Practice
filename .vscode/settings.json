@@ -4,6 +4,8 @@
         "iostream": "cpp",
         "sumprod,cpp": "cpp",
         "forward_list": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "largest": "cpp",
+        "new": "cpp"
     }
 }

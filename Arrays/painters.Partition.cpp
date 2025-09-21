@@ -9,6 +9,9 @@ bool isValid(vector<int> & arr, int n, int m, int maxAllowedTime){  //o(n)
 
     int painter = 1, time = 0;
     for(int i=0; i<n; i++){
+        if(arr[i] > maxAllowedTime){
+            return false;
+        }
         if(time + arr[i] <= maxAllowedTime){
             time += arr[i];
         }else{
@@ -22,7 +25,7 @@ int painterPainting(vector<int> & arr, int n, int m){
 
     //find range befor add all ele
 
-    int sum = 0, maxVal = INT_MAX;
+    int sum = 0, maxVal = INT_MIN;
     for(int i=0; i<n; i++){  //o(n)
         sum += arr[i];
         maxVal = max(maxVal, arr[i]);

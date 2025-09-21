@@ -36,3 +36,15 @@ public:
         
     }
 };
+
+int main() {
+    
+    int arr[] = {1,1,2,2,3,3,4,4,7,5,5};
+    int sz = sizeof(arr) / sizeof(arr[0]);
+    vector<int> nums(arr, arr + sz);
+
+    Solution obj;
+    cout << "Single element in sorted array = " << obj.singleNonDuplicate(nums) << endl;
+
+    return 0;
+}
