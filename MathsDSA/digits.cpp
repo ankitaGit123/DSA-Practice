@@ -4,10 +4,10 @@ using namespace std;
 
 
 // Number
-void printDig(int n){
+void printDigNo(int n){
     while(n != 0){
         int digit = n % 10;
-        cout<< digit <<endl;
+        cout<< digit;
         n = n/10;
     }
      
@@ -24,18 +24,20 @@ void printDig(int n){
 //     cout<< count<<endl;
 // }
 //sum of digit
-void sumDigi(int n){
-    int sum = 0;
-    while( n != 0){
-        int digit = n % 10;
-        sum += digit;
-        n=n/10;
-    }
-    cout<<sum<<endl;
-}
+// void sumDigi(int n){
+//     int sum = 0;
+//     while( n != 0){
+//         int digit = n % 10;
+//         sum += digit;
+//         n=n/10;
+//     }
+//     cout<<sum<<endl;
+// }
 
 int main(){
     int n = 23456;
-    sumDigi(n);
+    printDigNo(n);
+    //printDig(n);
+    //sumDigi(n);
     return 0;
 }

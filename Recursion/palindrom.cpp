@@ -36,3 +36,15 @@ public:
         
     }
 };
+int main(){
+    Solution s;
+    string str = "abcd";
+    vector<vector<string>> ans = s.partition(str);
+    for(auto v: ans){
+        for(auto part: v){
+            cout<<part<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}

@@ -2,9 +2,9 @@
 #include <vector>
 using namespace std;
 
-pair<int, int> searchMatrix(vector<vector<int>>& matrix, int target) {
-    int rows = matrix.size();
-    int cols = matrix[0].size();
+pair<int, int> searchMatrix(vector<vector<int>>& matrix, int rows, int cols, int target) {
+    //int rows = matrix.size();
+    //int cols = matrix[0].size();
 
     // Traverse each element
     for (int i = 0; i < rows; ++i) {
@@ -23,13 +23,12 @@ int main() {
         {1, 3, 5},
         {7, 9, 11},
         {13, 15, 17}
-    };
+    }; 
 
-    int target = 15;
+    //int target = 15;
 
-    pair<int, int> result = searchMatrix(matrix, target);
+    pair<int, int> result = searchMatrix(matrix, 3, 3, 11);
     
-    cout << result.first << " " << result.second << endl;
-
+    cout << result.first << ", " << result.second << endl;
     return 0;
 }

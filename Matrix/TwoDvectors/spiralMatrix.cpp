@@ -41,3 +41,16 @@ public:
         return ans;
     }
 };
+int main(){
+    vector<vector<int>> matrix = { {1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13,14,15,16}};
+
+    Solution s;
+    vector<int> result = s.spiralOrder(matrix);
+
+    cout<<"Spiral order ";
+    for(int x : result){
+        cout<<x <<" ";
+    }
+    cout<< endl;
+    return 0;
+}

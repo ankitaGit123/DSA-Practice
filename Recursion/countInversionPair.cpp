@@ -47,7 +47,7 @@ int mergeSort(vector<int> &arr, int st, int end){
 
 
 int main(){
-    vector<int> arr = {6, 3, 5, 2, 7};
+    vector<int> arr = {6, 3, 5, 2, 7, 6, 8, 1, 4};
 
     int ans = mergeSort(arr, 0, arr.size()-1);
     cout<< "inv count : " <<ans <<endl;

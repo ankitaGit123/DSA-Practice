@@ -28,3 +28,9 @@ public:
         
     }
 };
+int main() {
+    int n = 353;
+    Solution obj;
+    cout << "Is " << n << " a palindrome? " << (obj.isPalindrome(n) ? "Yes" : "No") << endl;
+    return 0;
+}
